@@ -1,7 +1,8 @@
+
 my:
   name: 寇冬
-  gender: 男
-
+  gender: boy
+  
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -19,3 +20,19 @@ spring:
         max-wait: -1ms
         max-idle: 10
         min-idle: 0
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud: 
+    bus:
+      enabled: true
+      trace: 
+        enabled: true
+        
+management:
+  endpoints: 
+    web: 
+      exposure: 
+        include: "*"
